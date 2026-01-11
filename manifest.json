@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Goodbye Google Grief",
+    "version": "1.0",
+    "description": "Goodbye Google Grief (GGG / トリプルジー) - Google Calendarの空き時間を簡単にコピー",
+    "permissions": ["scripting", "activeTab"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "commands": {
+      "open-popup": {
+        "description": "Open Goodbye Google Grief popup"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://calendar.google.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
+  

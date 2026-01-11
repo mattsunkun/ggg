@@ -1,0 +1,49 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px 0;
+      font-size: 13px;
+    }
+    input {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #1557b0;
+    }
+  </style>
+</head>
+<body>
+  <button id="copy">空き時間をコピー</button>
+  <label>開始日: <input type="date" id="start" /></label>
+  <label>終了日: <input type="date" id="end" /></label>
+  <label>開始時刻: <input type="time" id="startTime" value="08:00" /></label>
+  <label>終了時刻: <input type="time" id="endTime" value="20:00" /></label>
+  <label>予定からのマージン（分）: <input type="number" id="margin" value="15" min="0" /></label>
+  <label>最小空き時間（分）: <input type="number" id="minFreeTime" value="60" min="0" placeholder="x分以下の空き時間は表示しない" /></label>
+  <div style="font-size: 11px; color: #666; margin-top: 5px; text-align: center;">Ctrl+Enter（Mac: Cmd+Enter）でコピー</div>
+  <button id="debug" style="margin-top: 5px; background-color: #666;">デバッグ（コンソール確認）</button>
+  <script src="popup.js"></script>
+</body>
+</html>
