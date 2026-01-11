@@ -36,14 +36,14 @@
 </head>
 <body>
   <button id="copy">空き時間をコピー</button>
+  <div style="font-size: 11px; color: #666; margin-top: 5px; text-align: center;">Ctrl+Enter（Mac: Cmd+Enter）でコピー</div>
   <label>開始日: <input type="date" id="start" /></label>
   <label>終了日: <input type="date" id="end" /></label>
   <label>開始時刻: <input type="time" id="startTime" value="08:00" /></label>
   <label>終了時刻: <input type="time" id="endTime" value="20:00" /></label>
   <label>予定からのマージン（分）: <input type="number" id="margin" value="15" min="0" /></label>
   <label>最小空き時間（分）: <input type="number" id="minFreeTime" value="60" min="0" placeholder="x分以下の空き時間は表示しない" /></label>
-  <div style="font-size: 11px; color: #666; margin-top: 5px; text-align: center;">Ctrl+Enter（Mac: Cmd+Enter）でコピー</div>
-  <button id="debug" style="margin-top: 5px; background-color: #666;">デバッグ（コンソール確認）</button>
+  <button id="debug" style="margin-top: 5px; background-color: #999;">デバッグ（コンソール確認）</button>
   <script src="popup.js"></script>
 </body>
 </html>
